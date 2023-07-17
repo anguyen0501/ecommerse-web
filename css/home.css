@@ -13,6 +13,7 @@ body {
 
 .banner {
 	display: block;
+	width: 100%;
 }
 
 /* =============================nav====================================*/
@@ -136,12 +137,12 @@ a {
 .rightcolumn {
 	float: left;
 	width: 25%;
-	padding-left: 20px;
 }
-.images {
-	height: 200px;
+
+.leftcolumn .images {
 	width: 100%;
 }
+
 .product {
 	width: 30%;
 	background-color: white;
@@ -151,12 +152,14 @@ a {
 	display: block;
 	border: 2px;
 }
+
 .row::after {
 	content: "";
 	display: table;
 	clear: both;
 }
-h3 {
+
+.product h3 {
 	/* Font & Text */
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 17px;
@@ -580,13 +583,26 @@ h3 {
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
+
 .card {
 	font-family: "Source Sans Pro", sans-serif;
 	background-color: white;
 
-	padding: 20px;
+	padding: 15px;
 	margin-top: 12px;
 	text-align: center;
+}
+
+.card > h2 {
+	font-size: 20px;
+}
+
+.card > video {
+	margin: 10px auto;
+}
+
+.card > p {
+	font-weight: bold;
 }
 
 footer {
