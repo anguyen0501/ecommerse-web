@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+body{
+    background-color: #ECECEC;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+header {
+    background-color: #57131F;
+    text-align: center
+}
+/* =============================nav====================================*/
+nav {background-color: #E30019;}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li, a {
+    color: white;
+    font-size: 12px;
+}
+nav ul li:nth-child(2) i {
+    font-size: 15px;
+    margin-left: 6px;
+}
+nav ul li:nth-child(3){
+    position: relative;
+}
+nav ul li:nth-child(3) input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 6px;
+    outline: none;
+}
+nav ul li:nth-child(3) i {
+    position: absolute;
+    font-size: 15px;
+    right: 12px;
+    color: #E30019;
+    line-height: 30px;
+    cursor: pointer;
+}
+nav ul li:nth-child(4) button {
+    height: 30px;
+    padding: 0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(223, 19, 19);
+    border-radius: 5px;
+    transition: all o.5 ease;
+}
+nav ul li:nth-child(4) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(4) button:hover {
+    background-color: rgb(223, 19, 19);
+}
+nav ul li:nth-child(5) {
+    text-align: center;
+}
+/*--------------------------menu-bar-------------------------------*/
+.menu-bar{
+    background-color: #FFFFFF;
+    padding: 12px 0 ;
+    border: #E30019;
+}
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-bar ul li a {
+    color:black;
+    font-size: 16px;
+}
+.menu-bar ul li a i {
+    padding: 6px;
+}
+.menu-bar ul li a:hover{
+    color: #E30019;
+}
+.menu-bar ul li:nth-child(5){
+    position: relative;
+}
+.menu-bar ul li:nth-child(5)::before {
+    position: absolute;
+    content: "Giảm 5%";
+    display: block;
+    height: 15px;
+    width: 45px;
+    background-color: #E30019;
+    border-radius: 5px;
+    right: 0;
+    top: -10px;;
+    font-size: 10px;
+    
+    padding-left: 5px;
+    color: white;
+}
+/*---------------------------------------------------------------*/
+.leftcolumn {
+    float: left; width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+}
+
+.rightcolumn {
+    float: left; width: 25%; padding-left: 20px; 
+}
+.images {
+     height: 200px; 
+     width: 100%;
+}
+.product {
+    width: 30%;
+    background-color:white;
+    padding: 10px ; margin: 10px; 
+    float: left;
+    display: block;
+    border: 2px;
+    
+
+}
+.row::after {
+    content: "";
+    display: table; clear: both;
+}
+h3 {
+	/* Font & Text */
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 17px;
+	text-decoration: none solid rgb(80, 79, 79);
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(80, 79, 79);
+
+	/* Box */
+	height: 43px;
+	width: 277.025px;
+	border: 0px none rgb(80, 79, 79);
+	border-top: 0px none rgb(80, 79, 79);
+	border-right: 0px none rgb(80, 79, 79);
+	border-bottom: 0px none rgb(80, 79, 79);
+	border-left: 0px none rgb(80, 79, 79);
+	margin: 0px;
+	padding: 10px 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: 100%;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: -webkit-box;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: hidden;
+	cursor: pointer;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0s ease 0s;
+	/*outline: rgb(255, 0, 0) dashed 0.8px;*/
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: ellipsis;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.contains--action--buy {
+	/* Font & Text */
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: none solid rgb(255, 255, 255);
+	text-align: center;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgb(224, 47, 47);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(255, 255, 255);
+
+	/* Box */
+	height: 40px;
+	width: 138.512px;
+	border: 1.6px solid rgb(224, 47, 47);
+	border-top: 1.6px solid rgb(224, 47, 47);
+	border-right: 1.6px solid rgb(224, 47, 47);
+	border-bottom: 1.6px solid rgb(224, 47, 47);
+	border-left: 1.6px solid rgb(224, 47, 47);
+	margin: 0px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: inline-block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: pointer;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0.3s ease 0s;
+	outline: rgb(255, 255, 255) dashed 0px;
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.contains--price-unit {
+	/* Font & Text */
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 21.6px;
+	text-decoration: none solid rgb(224, 47, 47);
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	/* vertical-align: baseline; */
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(224, 47, 47);
+
+	/* Box */
+	height: 21.6px;
+	width: 93.0875px;
+	border: 0px none rgb(224, 47, 47);
+	border-top: 0px none rgb(224, 47, 47);
+	border-right: 0px none rgb(224, 47, 47);
+	border-bottom: 0px none rgb(224, 47, 47);
+	border-left: 0px none rgb(224, 47, 47);
+	margin: 0px 0px 8px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: pointer;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0s ease 0s;
+	/* outline: rgb(255, 0, 0) dashed 0.8px; */
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.contains--action--buy {
+	/* Font & Text */
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: none solid rgb(255, 255, 255);
+	text-align: center;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgb(224, 47, 47);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(255, 255, 255);
+
+	/* Box */
+	height: 40px;
+	width: 138.512px;
+	border: 1.6px solid rgb(224, 47, 47);
+	border-top: 1.6px solid rgb(224, 47, 47);
+	border-right: 1.6px solid rgb(224, 47, 47);
+	border-bottom: 1.6px solid rgb(224, 47, 47);
+	border-left: 1.6px solid rgb(224, 47, 47);
+	margin: 0px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: inline-block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: pointer;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0.3s ease 0s;
+	outline: rgb(255, 255, 255) dashed 0px;
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.contains--action-addcart {
+	/* Font & Text */
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: none solid rgb(80, 79, 79);
+	text-align: center;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgb(255, 255, 255);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(80, 79, 79);
+
+	/* Box */
+	height: 40px;
+	width: 138.512px;
+	border: 1.6px solid rgb(213, 213, 213);
+	border-top: 1.6px solid rgb(213, 213, 213);
+	border-right: 1.6px solid rgb(213, 213, 213);
+	border-bottom: 1.6px solid rgb(213, 213, 213);
+	border-left: 1.6px solid rgb(213, 213, 213);
+	margin: 0px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: inline-block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: pointer;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0.3s ease 0s;
+	outline: rgb(80, 79, 79) dashed 0px;
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.card{
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: white;
+
+    padding: 20px;
+    margin-top: 12px;
+    text-align: center ;
+    
+}
+.footer{
+    padding: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    color: #E30019;
+}
+
+	
+
