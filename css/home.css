@@ -588,10 +588,44 @@ h3 {
 	margin-top: 12px;
 	text-align: center;
 }
-.footer {
-	padding: 10px;
-	text-align: center;
-	background-color: #ffffff;
-	margin-top: 10px;
-	color: #e30019;
+
+footer {
+	padding-top: 3rem;
+}
+
+.footer__container {
+	background-color: #fff;
+	padding: 2rem 6%;
+	display: flex;
+}
+
+ul.chinhsach {
+	padding: 0 1rem;
+}
+
+ul.chinhsach li {
+	padding: 5px 0;
+}
+
+ul.chinhsach li a {
+	color: black;
+	font-weight: 600;
+}
+
+li.chinhsach--item span {
+	font-size: 15px;
+	font-weight: 600;
+	color: #3e3d3d;
+}
+li.chinhsach--item p {
+	font-size: 18px;
+	font-weight: 600;
+	color: black;
+	padding: 0;
+	margin: 0;
+}
+
+li.chinhsach--item img {
+	height: 40px;
+	width: 50px;
 }
