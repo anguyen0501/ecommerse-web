@@ -219,9 +219,9 @@ h4.contains--price--unit {
 }
 
 .contains--price--percent p {
-	position: absolute;
+	position: relative;
 	top: 30%;
-	left: 20%;
+	text-align: center;
 	color: var(--primary-color);
 }
 
