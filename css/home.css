@@ -1,3 +1,11 @@
+:root {
+	--text-color: black;
+	--primary-color: #e30019;
+	--blue-color: #007bff;
+	--background-dark-white: #f1f2f1;
+	--product-title: rgb(80, 79, 79);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -134,23 +142,16 @@ a {
 	flex-basis: auto;
 }
 
-.rightcolumn {
-	float: left;
-	width: 25%;
-}
-
-.leftcolumn .images {
-	width: 100%;
-}
-
 .product {
-	width: 30%;
+	width: calc(100% / 3 - 1.5rem);
 	background-color: white;
 	padding: 10px;
 	margin: 10px;
 	float: left;
 	display: block;
 	border: 2px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 2px var(--background-dark-white);
 }
 
 .row::after {
@@ -159,429 +160,117 @@ a {
 	clear: both;
 }
 
-.product h3 {
-	/* Font & Text */
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: 17px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	letter-spacing: normal;
-	line-height: 17px;
-	text-decoration: none solid rgb(80, 79, 79);
-	text-align: start;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(80, 79, 79);
-
-	/* Box */
-	height: 43px;
-	width: 277.025px;
-	border: 0px none rgb(80, 79, 79);
-	border-top: 0px none rgb(80, 79, 79);
-	border-right: 0px none rgb(80, 79, 79);
-	border-bottom: 0px none rgb(80, 79, 79);
-	border-left: 0px none rgb(80, 79, 79);
-	margin: 0px;
-	padding: 10px 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: 100%;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: -webkit-box;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
+.product .images {
+	height: auto;
+	width: 100%;
+	padding: 1rem;
 	overflow: hidden;
-	cursor: pointer;
-	visibility: visible;
+	object-fit: cover;
+	transition: 0.3s ease-in;
+}
 
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	/*outline: rgb(255, 0, 0) dashed 0.8px;*/
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
+.images:hover {
+	transform: scale(1.1);
+}
+
+.contains--title {
+	color: var(--product-title);
+	background-color: var(--background-dark-white);
+	padding: 5px 5px;
+}
+
+.contains--title h3 {
+	font-size: 17px;
+	font-weight: 500;
+	margin: 0 auto;
+	line-height: 1;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 	text-overflow: ellipsis;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+}
+
+.child--contains--price {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+
+.contains--price--discount {
+	font-weight: lighter;
+	font-size: 16px;
+}
+
+h4.contains--price--unit {
+	font-size: 19px;
+	font-weight: 500;
+	color: var(--primary-color);
+	margin: 5px auto;
+}
+
+.contains--price--percent {
+	background-image: url("../images/icon-saleoff.webp");
+	height: auto;
+	width: 50px;
+	background-repeat: no-repeat;
+	align-items: center;
+	position: relative;
+}
+
+.contains--price--percent p {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	color: var(--primary-color);
+}
+
+.contains--action {
+	padding: 0 0.3rem 0.3rem 0.3rem;
+}
+
+.contains--action button {
+	height: 40px;
+	width: calc(100% / 2 - 0.2rem);
 }
 
 .contains--action--buy {
-	/* Font & Text */
-	font-family: "Source Sans Pro", sans-serif;
+	border-radius: 3px;
+	border: 2px solid var(--primary-color);
+	background-color: var(--primary-color);
+	color: #fff;
 	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
 	font-weight: 500;
-	letter-spacing: normal;
-	line-height: 24px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgb(224, 47, 47);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-
-	/* Box */
-	height: 40px;
-	width: 138.512px;
-	border: 1.6px solid rgb(224, 47, 47);
-	border-top: 1.6px solid rgb(224, 47, 47);
-	border-right: 1.6px solid rgb(224, 47, 47);
-	border-bottom: 1.6px solid rgb(224, 47, 47);
-	border-left: 1.6px solid rgb(224, 47, 47);
-	margin: 0px;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: inline-block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: pointer;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0.3s ease 0s;
-	outline: rgb(255, 255, 255) dashed 0px;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	transition: 0.3s ease;
+	height: 50px;
+	width: 150px;
 }
 
-.contains--price-unit {
-	/* Font & Text */
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: 18px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	letter-spacing: normal;
-	line-height: 21.6px;
-	text-decoration: none solid rgb(224, 47, 47);
-	text-align: start;
-	text-indent: 0px;
-	text-transform: none;
-	/* vertical-align: baseline; */
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(224, 47, 47);
-
-	/* Box */
-	height: 21.6px;
-	width: 93.0875px;
-	border: 0px none rgb(224, 47, 47);
-	border-top: 0px none rgb(224, 47, 47);
-	border-right: 0px none rgb(224, 47, 47);
-	border-bottom: 0px none rgb(224, 47, 47);
-	border-left: 0px none rgb(224, 47, 47);
-	margin: 0px 0px 8px;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: pointer;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	/* outline: rgb(255, 0, 0) dashed 0.8px; */
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+.contains--action--buy:hover {
+	border: 2px solid #cc1f1f;
+	background-color: #cc1f1f;
+	color: #fff;
 }
 
-.contains--action--buy {
-	/* Font & Text */
-	font-family: "Source Sans Pro", sans-serif;
+.contains--action--addcart {
+	border-radius: 3px;
+	border: 2px solid #d5d5d5;
+	background-color: #fff;
+	color: var(--text-color);
 	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
 	font-weight: 500;
-	letter-spacing: normal;
-	line-height: 24px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgb(224, 47, 47);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-
-	/* Box */
-	height: 40px;
-	width: 138.512px;
-	border: 1.6px solid rgb(224, 47, 47);
-	border-top: 1.6px solid rgb(224, 47, 47);
-	border-right: 1.6px solid rgb(224, 47, 47);
-	border-bottom: 1.6px solid rgb(224, 47, 47);
-	border-left: 1.6px solid rgb(224, 47, 47);
-	margin: 0px;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: inline-block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: pointer;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0.3s ease 0s;
-	outline: rgb(255, 255, 255) dashed 0px;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	transition: 0.3s ease;
 }
 
-.contains--action-addcart {
-	/* Font & Text */
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	letter-spacing: normal;
-	line-height: 24px;
-	text-decoration: none solid rgb(80, 79, 79);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
+.contains--action--addcart:hover {
+	border: 2px solid #d5d5d5;
+	background-color: #dadada;
+	color: #000;
+}
 
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgb(255, 255, 255);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(80, 79, 79);
-
-	/* Box */
-	height: 40px;
-	width: 138.512px;
-	border: 1.6px solid rgb(213, 213, 213);
-	border-top: 1.6px solid rgb(213, 213, 213);
-	border-right: 1.6px solid rgb(213, 213, 213);
-	border-bottom: 1.6px solid rgb(213, 213, 213);
-	border-left: 1.6px solid rgb(213, 213, 213);
-	margin: 0px;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: inline-block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: pointer;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0.3s ease 0s;
-	outline: rgb(80, 79, 79) dashed 0px;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+.rightcolumn {
+	float: left;
+	width: 25%;
 }
 
 .card {
