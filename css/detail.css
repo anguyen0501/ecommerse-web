@@ -152,9 +152,11 @@
 }
 
 a.tech-parameter-more {
+	display: block;
 	color: #064bb9;
 	font-size: 18px;
 	font-weight: 500;
+	text-align: center;
 }
 
 a.tech-parameter-more:hover {
@@ -366,6 +368,11 @@ a.tech-parameter-more:hover {
 	background-color: #ffffff;
 }
 
+.contain--left--container p:nth-child(2n) {
+	text-align: justify;
+	text-indent: 25px;
+}
+
 .contain--left--container h1.title {
 	font-size: 25px;
 	font-weight: 500;
@@ -458,4 +465,8 @@ a.tech-parameter-more:hover {
 	font-size: 16px;
 	color: var(--text-color);
 	font-weight: 500;
+}
+
+.contain--right--container table tr td:nth-child(2n) {
+	text-align: justify;
 }
