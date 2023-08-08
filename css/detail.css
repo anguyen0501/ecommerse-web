@@ -8,6 +8,11 @@
 	--product-title: rgb(80, 79, 79);
 }
 
+body {
+	width: 100%;
+	height: 100%;
+}
+
 .product__detail {
 	position: relative;
 	background-color: var(--background-color);
@@ -116,8 +121,7 @@
 	box-shadow: 0px 0px 0px 1px #d5d5d5;
 	cursor: pointer;
 	padding: 0.5rem;
-	width: 100%;
-	height: 100%;
+	width: calc((100% - 10px) / 4);
 }
 
 .product-param {
@@ -395,21 +399,16 @@ a.tech-parameter-more:hover {
 .product__description--content-child p.danhgia {
 	font-size: 20px;
 	font-weight: 500;
-	color: #000000;
-	display: -webkit-box;
 	max-width: 100%;
 	margin: 0 auto;
-	height: 60px;
-	line-height: 1;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+	line-height: 3;
 	overflow: hidden;
 	white-space: normal;
 	text-overflow: ellipsis;
 }
 
 .product__description--content-child p.description--content {
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 500;
 	color: var(--text-color);
 }
