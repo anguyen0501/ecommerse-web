@@ -19,7 +19,6 @@
 .row {
 	display: flex;
 	line-height: 28px;
-	text-align: center;
 	background: #ffeaea;
 }
 
@@ -30,16 +29,25 @@
 }
 
 .row > div {
+	display: flex;
 	width: calc(90% / 4);
 	border: 0.5px solid black;
+	align-items: center;
+	justify-content: center;
 }
 
 .row > div:first-child {
 	width: 10%;
 }
 
-.row > div:nth-child(2) {
-	font-weight: bold;
+.row:not(.head + .row) > div:nth-child(2) {
+	font-weight: 600;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 5px;
 }
 
 .row:last-of-type > div:first-child {
