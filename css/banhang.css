@@ -1,0 +1,55 @@
+.container {
+	width: 90%;
+	margin: 50px auto 0px auto;
+	border: 0.5px solid black;
+	background: lightcoral;
+}
+
+.head {
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.head select {
+	margin-top: 10px;
+	padding: 5px 0px 5px 5px;
+}
+
+.row {
+	display: flex;
+	line-height: 28px;
+	text-align: center;
+	background: #ffeaea;
+}
+
+.head + .row,
+.row:last-of-type {
+	font-weight: bold;
+	color: crimson;
+}
+
+.row > div {
+	width: calc(90% / 4);
+	border: 0.5px solid black;
+}
+
+.row > div:first-child {
+	width: 10%;
+}
+
+.row > div:nth-child(2) {
+	font-weight: bold;
+}
+
+.row:last-of-type > div:first-child {
+	width: calc(10% + 90% / 4 * 3);
+}
+
+.row:last-of-type > div:last-child {
+	width: calc(100% - (10% + 90% / 4 * 3));
+}
+
+.row > div:last-child {
+	font-weight: bold;
+}

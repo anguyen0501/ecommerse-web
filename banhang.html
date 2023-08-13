@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website for selling electronic products.">
+    <meta name="keywords"
+        content="e-commerce, Apple, Asus, Acer, Lenovo, HP, PC, Iphone, Mac, Ipad, Apple Watch, Samsung, OPPO, laptop, headphone, smartphone, tablet, accessories">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkking Shop</title>
+    <script src="https://kit.fontawesome.com/ffedd7c79f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/banhang.css">
+    <script src="./js/banhang.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="banner" src="./images/topbar_banner.webp" alt="Ads banner">
+
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <div class="logo"><span>LINKKING</span></div>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <input type="text" placeholder="Bạn cần tìm gì..." spellcheck="false"><i
+                                class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        </a></li>
+                    <li><a href="#"><i class="fa-solid fa-tag" aria-hidden="true"></i> Khuyến mãi</a></li>
+                    <li><a href="#"><i class="fa-solid fa-newspaper"></i> Tin công nghệ</a></li>
+                    <li><a href="#"><i class="fa-solid fa-credit-card"></i> Hướng dẫn trả góp</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Tài khoản</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="menu-bar">
+            <div class="menu-bar-container">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-mobile-screen"></i>Điện thoại</a></li>
+                    <li><a href="#"><i class="fa-solid fa-laptop"></i>Laptop</a></li>
+                    <li><a href="#"><i class="fa-solid fa-tablet-screen-button"></i>Tablet</a></li>
+                    <li><a href="#"><i class="fa-solid fa-headphones"></i>Phụ kiện</a></li>
+                    <li><a href="#"><i class="fa-solid fa-laptop"></i>PC</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="head">
+                <p>BÁN HÀNG</p>
+                <select name="mucgia" id="mucgia">
+                    <option value="default">Mức giá</option>
+                    <option value="lt10">DƯỚI 10 TRIỆU</option>
+                    <option value="10to20">10 - 20 TRIỆU</option>
+                    <option value="gt20">TRÊN 20 TRIỆU</option>
+                </select>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" name="chonhet" id="chonhet"></div>
+                <div>Hàng hóa</div>
+                <div>Đơn giá</div>
+                <div>Số lượng</div>
+                <div>Thành tiền</div>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
+                <div>Laptop Acer Predator Gaming Helios PH315-54-99S6 i9 11900H/16G/512G/15.6/GeForce RTX3060 6G/Win11
+                </div>
+                <div class="dg">16.641.000&nbsp;₫</div>
+                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
+                <div class="tt">0</div>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
+                <div>Laptop Acer Nitro Gaming AN515-57-5669 i5 11400H/8GB/512GB SSD/Nvidia GTX1650 4GB/Win11
+                </div>
+                <div class="dg">19.990.000&nbsp;₫</div>
+                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
+                <div class="tt">0</div>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
+                <div>Laptop Asus ROG Strix Gaming G513IE-HN246W R7 4800H/8GB/512GB/15.6FHD/GeForce RTX 3050 Ti 4GB/Win11
+                </div>
+                <div class="dg">25.640.500&nbsp;₫</div>
+                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
+                <div class="tt">0</div>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
+                <div>Laptop ASUS Gaming ROG Strix G634JZ-N4029W i9 13980HX/16GB/1TB/16QHD/GeForce RTX 4080 12GB/Win11
+                </div>
+                <div class="dg">87.300.000&nbsp;₫</div>
+                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
+                <div class="tt">0</div>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
+                <div>Laptop Lenovo Gaming Legion 5 15ARH7 R5 6600H/8GB/512GB/15.6FHD/GeForce RTX 3050 4GB/Win11
+                </div>
+                <div class="dg">24.351.300&nbsp;₫</div>
+                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
+                <div class="tt">0</div>
+            </div>
+            <div class="row">
+                <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
+                <div>Laptop Lenovo Gaming Legion 5 15IAH7H i7 12700H/16GB/512GB/15.6WQHD/RTX 3060 6GB/Win11
+                </div>
+                <div class="dg">29.239.140&nbsp;₫</div>
+                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
+                <div class="tt">0</div>
+            </div>
+            <div class="row">
+                <div>Tổng</div>
+                <div id="tongtien"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__container">
+            <ul class="chinhsach">
+                <li class="chinhsach--item"><a href="#">Giới thiệu về công
+                        ty</a></li>
+                <li class="chinhsach--item"><a href="#">Chính sách bảo
+                        mật</a></li>
+                <li class="chinhsach--item"><a href="#">Quy chế hoạt
+                        động</a></li>
+                <li class="chinhsach--item"><a href="#">Kiểm tra hóa đơn
+                        điện tử</a></li>
+                <li class="chinhsach--item"><a href="#">Tra cứu thông tin
+                        bảo hành</a></li>
+                <li class="chinhsach--item"><a href="#">Câu hỏi thường gặp
+                        mua hàng</a></li>
+                <li class="chinhsach--item" style="display: flex;"><img src="./images/ft-img1.png" alt=""
+                        style="width: 50px; height: 50px;"><img src="./images/ft-img2.png" alt=""
+                        style="width: 200px; height: 50px;"></li>
+            </ul>
+            <ul class="chinhsach">
+                <li class="chinhsach--item"><a href="#">Tin tuyển dụng</a>
+                </li>
+                <li class="chinhsach--item"><a href="#">Tin khuyến mãi</a>
+                </li>
+                <li class="chinhsach--item"><a href="#">Hướng dẫn mua sắm
+                        online</a></li>
+                <li class="chinhsach--item"><a href="#">Hướng dẫn mua trả
+                        góp</a></li>
+                <li class="chinhsach--item"><a href="#">Chính sách trả
+                        góp</a></li>
+                <li class="chinhsach--item"><a href="#">Chứng nhận</a>
+                </li>
+                <li class="chinhsach--item" style="display: flex;"><img src="./images/ft-img3.png" alt=""
+                        style="width: 100%"><img src="./images/ft-img4.png" alt="" style="width: 100%"><img
+                        src="./images/ft-img5.png" alt="" style="width: 100%"></li>
+            </ul>
+            <ul class="chinhsach">
+                <li class="chinhsach--item"><a href="#">Hệ thống cửa
+                        hàng</a></li>
+                <li class="chinhsach--item"><a href="#">Chính sách đổi
+                        trả</a></li>
+                <li class="chinhsach--item"><a href="#">Hệ thống bảo
+                        hành</a></li>
+                <li class="chinhsach--item"><a href="#">Giới thiệu máy đổi
+                        trả</a></li>
+                <li class="chinhsach--item"><a href="#">Kiểm tra hàng
+                        Apple chính hãng</a></li>
+            </ul>
+            <ul class="chinhsach">
+                <li class="chinhsach--item"><span>Tư vấn mua hàng</span>
+                    <p>1800 6611 <span>(Nhánh 1)</span></p>
+                </li>
+                <li class="chinhsach--item"><span>Hỗ trợ kỹ thuật</span>
+                    <p>1800 6601 <span>(Nhánh 2)</span></p>
+                </li>
+                <li class="chinhsach--item"><span>Góp ý, khiếu nại</span>
+                    <p>1800 6611</p>
+                </li>
+                <li class="chinhsach--item"><span>Hỗ trợ thanh toán:</span><br><img src="./images/ft-img6.png"
+                        alt=""><img src="./images/ft-img7.png" alt=""><img src="./images/ft-img8.png" alt=""><img
+                        src="./images/ft-img9.png" alt=""><img src="./images/ft-img10.png" alt=""><br><img
+                        src="./images/ft-img11.png" alt=""><img src="./images/ft-img12.png" alt=""><img
+                        src="./images/ft-img13.png" alt=""><img src="./images/ft-img14.png" alt=""><img
+                        src="./images/ft-img15.png" alt=""></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
