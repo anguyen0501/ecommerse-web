@@ -9,6 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkking Shop</title>
     <script src="https://kit.fontawesome.com/ffedd7c79f.js" crossorigin="anonymous"></script>
+    <script>
+        function goToAccountPage() {
+    window.location.href = "Sign-up.html"; 
+    }
+
+        function goToCollectionPage() {
+    window.location.href = "#"; 
+    }
+
+    function goToSalesPage() {
+    window.location.href = "#";
+    }
+
+    </script>
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="icon" href="./images/favicon.png">
 </head>
@@ -217,7 +231,14 @@
                 </div>
                 <div class="card">
                     <h2>Theo dõi chúng tôi</h2>
-                    <img width="50%" src="./images/social1.jfif" alt="">
+                    <img width="50%" src="./images/social1.jfif" alt="">  
+                </div>
+                <div class="card">
+                    <div >
+                        <button onclick="goToAccountPage()" class="account-button">Tài khoản</button>
+                        <button class="collection-button">Bộ sưu tập</button>
+                        <button class="sales-button">Bán hàng</button>
+                    </div>
                 </div>
             </div>
         </div>

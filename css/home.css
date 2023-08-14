@@ -337,3 +337,49 @@ li.chinhsach--item img {
 	height: 40px;
 	width: 50px;
 }
+
+
+
+
+
+
+
+button {
+	width: 100%;
+    margin: 5px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.account-button {
+    background-color: #cc1f1f;
+}
+.account-button:hover {
+	border: 2px solid #d5d5d5;
+	background-color: #fff;
+	color: red;
+}
+
+.collection-button {
+    background-color: #cc1f1f;
+}
+.collection-button:hover {
+	border: 2px solid #d5d5d5;
+	background-color: #fff;
+	color: red;
+}
+.sales-button {
+    background-color: #cc1f1f;
+}
+.sales-button:hover{
+	border: 2px solid #d5d5d5;
+	background-color: #fff;
+	color: red;
+}
+
+
