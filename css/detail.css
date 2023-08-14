@@ -384,11 +384,9 @@ a.tech-parameter-more:hover {
 	max-width: 100%;
 	margin: 0 auto;
 	height: 25px;
-	line-height: 1;
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
-	white-space: normal;
 	text-overflow: ellipsis;
 }
 
