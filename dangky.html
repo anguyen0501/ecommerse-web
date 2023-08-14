@@ -9,29 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkking Shop</title>
     <script src="https://kit.fontawesome.com/ffedd7c79f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/sign-up.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/dangky.css" />
     <link rel="icon" href="./images/favicon.png">
-    <script>
-        const form = document.getElementById('registerForm');
-
-        form.addEventListener('submit', function (event) {
-            const inputs = form.querySelectorAll('input,select,textarea');
-            let hasError = false;
-
-            input.forEach(input => {
-                input.classList.remove('error');
-
-                if (!input.checkVisibility()) {
-                    input.classList.add('error');
-                    hasError = true;
-                }
-            });
-
-            if (!hasError) {
-                event.preventDefault();
-            }
-        });
-    </script>
+    <script src="./js/dangky.js"></script>
 </head>
 
 <body>
@@ -75,64 +56,73 @@
     </header>
 
     <main>
-        <div class="login__container">
-            <form id="registrationForm" class="register__container--form">
-                <h1>Đăng ký </h1><br>
-                <label for="ma"><span>Mã Sinh Viên:</span></label><br>
-                <input class="input_form" type="text" id="ma" name="ma" placeholder="Nhập mã Sinh viên" required><br>
+        <div class="register-container">
+            <form id="register-form">
+                <h1 class="register-title">ĐĂNG KÝ THÀNH VIÊN</h1><br>
+                <fieldset>
+                    <label for="ma"><span>Mã sinh viên</span></label><br>
+                    <input class="input_form" id="ma" name="ma" placeholder="Nhập mã sinh viên" required>
+                </fieldset>
 
-                <label for="hoTen"><span>Họ và Tên:</span></label><br>
-                <input class="input_form" type="text" id="hoTen" name="hoTen" placeholder="Nhập họ và tên" required><br>
+                <fieldset>
+                    <label for="hoTen"><span>Họ và tên</span></label><br>
+                    <input class="input_form" type="text" id="hoTen" name="hoTen" placeholder="Nhập họ và tên" required>
+                </fieldset>
 
-                <label for="email"><span>Email</span>:</label><br>
-                <input class="input_form" type="email" id="email" name="email" placeholder="Nhập địa chỉ email"
-                    required><br>
+                <fieldset>
+                    <label for="email"><span>Email</span></label><br>
+                    <input class="input_form" type="email" id="email" name="email" placeholder="Nhập địa chỉ email"
+                        required>
+                </fieldset>
 
+                <fieldset>
+                    <label for="gioitinh"><span>Giới tính</span></label><br>
+                    <div class="input_form">
+                        <label><input type="radio" class="radio" name="gioitinh" value="nam" required>&nbsp;Nam</label>
+                        &nbsp;
+                        <label><input type="radio" class="radio" name="gioitinh" value="nu" required>&nbsp;Nữ</label>
+                    </div>
+                </fieldset>
 
+                <fieldset>
+                    <label for="soThich"><span>Sở thích</span></label><br>
+                    <div class="input_form">
+                        <label><input type="checkbox" class="checkbox" name="soThich" value="docSach">&nbsp;Đọc
+                            sách</label>
+                        &nbsp;
+                        <label><input type="checkbox" class="checkbox" name="soThich" value="duLich">&nbsp;Du
+                            lịch</label>
+                        &nbsp;
+                        <label><input type="checkbox" class="checkbox" name="soThich" value="amNhac">&nbsp;Âm
+                            nhạc</label>
+                        &nbsp;
+                        <label><input type="checkbox" class="checkbox" name="soThich" value="amThuc">&nbsp;Ẩm
+                            thực</label>
+                        &nbsp;
+                        <label><input type="checkbox" class="checkbox" name="soThich" value="Khac"
+                                required>&nbsp;Khác</label>
+                    </div>
+                </fieldset>
 
-                <label for="gioitinh"><span>Giới tính:</span></label><br>
-                <div class="input_form">
-                    <input type="radio" id="nam" name="gioitinh" value="nam" required>
-                    <label for="nam"> Nam</label>
-                    <input type="radio" id="nu" name="gioitinh" value="nu" required>
-                    <label for="nu">Nữ</label><br>
-                </div>
+                <fieldset>
+                    <label for="quocTich"><span>Quốc tịch</span></label><br>
+                    <select name="quocTich" id="quocTich" required>
+                        <option value="">Chọn quốc tịch</option>
+                        <option value="VietNam">Việt Nam</option>
+                        <option value="Lao">Lào</option>
+                        <option value="Campuchia">Campuchia</option>
+                        <option value="Khac">Khác</option>
+                    </select>
+                </fieldset>
 
-                <label for="soThich"><span>Sở Thích:</span></label><br>
-                <div class="input_form">
-                    <input type="checkbox" id="soThich" name="soThich" value="docSach" required>
-                    <label for="docSach">Đọc Sách</label>
+                <fieldset>
+                    <label for="ghiChu"><span>Ghi chú</span></label><br>
+                    <textarea name="ghiChu" id="ghiChu" cols="40" rows="5" maxlength="199"></textarea>
+                </fieldset>
 
-                    <input type="checkbox" id="soThich" name="soThich" value="duLich" required>
-                    <label for="duLich">Du Lịch </label>
-
-                    <input type="checkbox" id="soThich" name="soThich" value="amNhac" required>
-                    <label for="amNhac">Âm Nhạc </label>
-
-                    <input type="checkbox" id="soThich" name="soThich" value="amThuc" required>
-                    <label for="amThuc">Ẩm thực </label>
-
-                    <input type="checkbox" id="soThich" name="soThich" value="Khac" required>
-                    <label for="Khac">Khác </label><br>
-                </div>
-
-                <label for="quocTich"><span>Quốc Tịch:</span></label><br>
-                <select name="quocTich" id="quocTich">
-                    <option value="">Chọn quốc tịch:</option>
-                    <option value="VietNam">Việt Nam</option>
-                    <option value="Lào">Lào</option>
-                    <option value="Campuchia">Campuchia</option>
-                    <option value="Khác">Khác</option>
-                </select><br>
-
-                <label for="ghiChu"><span>Ghi Chú:</span></label><br>
-                <textarea name="ghiChu" id="ghiChu" cols="70" rows="10" maxlength="200"></textarea><br>
-                <button class="" type="submit">Đăng Ký </button>
-
-
+                <button type="submit" onclick="validateForm(this)">Đăng ký</button>
             </form>
         </div>
-
     </main>
 
     <footer>
