@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Website for selling electronic products.">
@@ -13,7 +14,7 @@
     <script>
         const form = document.getElementById('registerForm');
 
-        form.addEventListener('submit',function(event) {
+        form.addEventListener('submit', function (event) {
             const inputs = form.querySelectorAll('input,select,textarea');
             let hasError = false;
 
@@ -32,6 +33,7 @@
         });
     </script>
 </head>
+
 <body>
     <header>
         <img class="banner" src="./images/topbar_banner.webp" alt="Ads banner">
@@ -56,7 +58,7 @@
                 </ul>
             </nav>
         </div>
-        
+
         <section class="menu-bar">
             <div class="menu-bar-container">
                 <ul>
@@ -68,24 +70,25 @@
                 </ul>
             </div>
         </section>
-        
-        
+
+
     </header>
 
     <main>
         <div class="login__container">
             <form id="registrationForm" class="register__container--form">
                 <h1>Đăng ký </h1><br>
-                <label for="ma" ><span>Mã Sinh Viên:</span></label><br>
+                <label for="ma"><span>Mã Sinh Viên:</span></label><br>
                 <input class="input_form" type="text" id="ma" name="ma" placeholder="Nhập mã Sinh viên" required><br>
 
                 <label for="hoTen"><span>Họ và Tên:</span></label><br>
                 <input class="input_form" type="text" id="hoTen" name="hoTen" placeholder="Nhập họ và tên" required><br>
 
                 <label for="email"><span>Email</span>:</label><br>
-                <input class="input_form" type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required><br>
+                <input class="input_form" type="email" id="email" name="email" placeholder="Nhập địa chỉ email"
+                    required><br>
 
-                
+
 
                 <label for="gioitinh"><span>Giới tính:</span></label><br>
                 <div class="input_form">
@@ -99,16 +102,16 @@
                 <div class="input_form">
                     <input type="checkbox" id="soThich" name="soThich" value="docSach" required>
                     <label for="docSach">Đọc Sách</label>
-                
+
                     <input type="checkbox" id="soThich" name="soThich" value="duLich" required>
                     <label for="duLich">Du Lịch </label>
-                
+
                     <input type="checkbox" id="soThich" name="soThich" value="amNhac" required>
                     <label for="amNhac">Âm Nhạc </label>
-                
+
                     <input type="checkbox" id="soThich" name="soThich" value="amThuc" required>
                     <label for="amThuc">Ẩm thực </label>
-                
+
                     <input type="checkbox" id="soThich" name="soThich" value="Khac" required>
                     <label for="Khac">Khác </label><br>
                 </div>
@@ -129,7 +132,7 @@
 
             </form>
         </div>
-        
+
     </main>
 
     <footer>
@@ -200,4 +203,5 @@
         </div>
     </footer>
 </body>
+
 </html>
