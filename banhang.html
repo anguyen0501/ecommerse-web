@@ -57,15 +57,15 @@
         <div class="container">
             <div class="head">
                 <p>BÁN HÀNG</p>
-                <select name="mucgia" id="mucgia">
-                    <option value="default">Mức giá</option>
-                    <option value="lt10">DƯỚI 10 TRIỆU</option>
-                    <option value="10to20">10 - 20 TRIỆU</option>
-                    <option value="gt20">TRÊN 20 TRIỆU</option>
+                <select name="mucgia" id="mucgia" onchange="lochh(this)">
+                    <option value="default">Tất Cả</option>
+                    <option value="lt20">Dưới 20 Triệu</option>
+                    <option value="20to40">20 - 40 Triệu</option>
+                    <option value="gt40">Trên 40 Triệu</option>
                 </select>
             </div>
             <div class="row">
-                <div><input type="checkbox" name="chonhet" id="chonhet"></div>
+                <div><input type="checkbox" name="chonhet" id="chonhet" onclick="chonhet()"></div>
                 <div>Hàng hóa</div>
                 <div>Đơn giá</div>
                 <div>Số lượng</div>
@@ -73,54 +73,60 @@
             </div>
             <div class="row">
                 <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
-                <div>Laptop Acer Predator Gaming Helios PH315-54-99S6 i9 11900H/16G/512G/15.6/GeForce RTX3060 6G/Win11
-                </div>
-                <div class="dg">16.641.000&nbsp;₫</div>
-                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
-                <div class="tt">0</div>
+                <div class="product-name">Laptop Acer Predator Gaming Helios PH315-54-99S6 i9
+                    11900H/16G/512G/15.6/GeForce RTX3060 6G/Win11</div>
+                <div class="dg">16641000</div>
+                <div class="sl" onkeyup="tinhtien(this)"><input type="number" name="soluong" disabled min="0" value="0"
+                        placeholder="Nhập số lượng"></div>
+                <div class="tt"></div>
             </div>
             <div class="row">
                 <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
-                <div>Laptop Acer Nitro Gaming AN515-57-5669 i5 11400H/8GB/512GB SSD/Nvidia GTX1650 4GB/Win11
-                </div>
-                <div class="dg">19.990.000&nbsp;₫</div>
-                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
-                <div class="tt">0</div>
+                <div class="product-name">Laptop Acer Nitro Gaming AN515-57-5669 i5 11400H/8GB/512GB SSD/Nvidia GTX1650
+                    4GB/Win11</div>
+                <div class="dg">19990000</div>
+                <div class="sl" onkeyup="tinhtien(this)"><input type="number" name="soluong" disabled min="0" value="0"
+                        placeholder="Nhập số lượng"></div>
+                <div class="tt"></div>
             </div>
             <div class="row">
                 <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
-                <div>Laptop Asus ROG Strix Gaming G513IE-HN246W R7 4800H/8GB/512GB/15.6FHD/GeForce RTX 3050 Ti 4GB/Win11
-                </div>
-                <div class="dg">25.640.500&nbsp;₫</div>
-                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
-                <div class="tt">0</div>
+                <div class="product-name">Laptop Asus ROG Strix Gaming G513IE-HN246W R7 4800H/8GB/512GB/15.6FHD/GeForce
+                    RTX 3050 Ti 4GB/Win11</div>
+                <div class="dg">25640500</div>
+                <div class="sl" onkeyup="tinhtien(this)"><input type="number" name="soluong" disabled min="0" value="0"
+                        placeholder="Nhập số lượng"></div>
+                <div class="tt"></div>
             </div>
             <div class="row">
                 <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
-                <div>Laptop ASUS Gaming ROG Strix G634JZ-N4029W i9 13980HX/16GB/1TB/16QHD/GeForce RTX 4080 12GB/Win11
-                </div>
-                <div class="dg">87.300.000&nbsp;₫</div>
-                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
-                <div class="tt">0</div>
+                <div class="product-name">Laptop ASUS Gaming ROG Strix G634JZ-N4029W i9 13980HX/16GB/1TB/16QHD/GeForce
+                    RTX 4080 12GB/Win11</div>
+                <div class="dg">87300000</div>
+                <div class="sl" onkeyup="tinhtien(this)"><input type="number" name="soluong" disabled min="0" value="0"
+                        placeholder="Nhập số lượng"></div>
+                <div class="tt"></div>
             </div>
             <div class="row">
                 <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
-                <div>Laptop Lenovo Gaming Legion 5 15ARH7 R5 6600H/8GB/512GB/15.6FHD/GeForce RTX 3050 4GB/Win11
-                </div>
-                <div class="dg">24.351.300&nbsp;₫</div>
-                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
-                <div class="tt">0</div>
+                <div class="product-name">Laptop Lenovo Gaming Legion 5 15ARH7 R5 6600H/8GB/512GB/15.6FHD/GeForce RTX
+                    3050 4GB/Win11</div>
+                <div class="dg">24351300</div>
+                <div class="sl" onkeyup="tinhtien(this)"><input type="number" name="soluong" disabled min="0" value="0"
+                        placeholder="Nhập số lượng"></div>
+                <div class="tt"></div>
             </div>
             <div class="row">
                 <div><input type="checkbox" class="chon" onchange="daott(this)"></div>
-                <div>Laptop Lenovo Gaming Legion 5 15IAH7H i7 12700H/16GB/512GB/15.6WQHD/RTX 3060 6GB/Win11
-                </div>
-                <div class="dg">29.239.140&nbsp;₫</div>
-                <div class="sl" contenteditable="true" onkeyup="tinhtien(this)">0</div>
-                <div class="tt">0</div>
+                <div class="product-name">Laptop Lenovo Gaming Legion 5 15IAH7H i7 12700H/16GB/512GB/15.6WQHD/RTX 3060
+                    6GB/Win11</div>
+                <div class="dg">29239140</div>
+                <div class="sl" onkeyup="tinhtien(this)"><input type="number" name="soluong" disabled min="0" value="0"
+                        placeholder="Nhập số lượng"></div>
+                <div class="tt"></div>
             </div>
             <div class="row">
-                <div>Tổng</div>
+                <div id="tong-title">TỔNG</div>
                 <div id="tongtien"></div>
             </div>
         </div>
