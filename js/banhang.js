@@ -8,6 +8,10 @@ window.onload = function () {
 	}
 };
 
+function removeCurrencyFormat(text) {
+	return text.replace(/[. ₫]+/g, "");
+}
+
 function lochh(obj) {
 	let mucgia = document.getElementById("mucgia").value;
 	let minValue = 0,
@@ -25,7 +29,7 @@ function lochh(obj) {
 	let dg_arr = document.getElementsByClassName("dg");
 	for (let i = 0; i < dg_arr.length; ++i) {
 		let dg = dg_arr[i].innerText;
-		dg = Number(dg.replace(/[^0-9\.-]+/g, ""));
+		dg = Number(removeCurrencyFormat(dg));
 		if (dg < minValue || dg > maxValue) {
 			dg_arr[i].parentElement.style.display = "none";
 		} else {
@@ -38,7 +42,7 @@ function tinhtien(obj) {
 	let row = obj.parentElement;
 	let dg = row.children[2].innerText;
 	let sl = row.children[3].children[0].value;
-	dg = Number(dg.replace(/[^0-9\.-]+/g, ""));
+	dg = Number(removeCurrencyFormat(dg));
 	sl = Number(sl);
 	tt = dg * sl;
 	row.children[4].innerText = nf.format(tt) + " ₫";
@@ -66,7 +70,8 @@ function tinhtongtien() {
 	let tt = 0;
 	for (let i = 0; i < soluong.length; i++) {
 		if (soluong[i].children[0].disabled == false) {
-			let dg = parseInt(dongia[i].innerText.replace(/[^0-9\.-]+/g, "")) || 0;
+			let dg = removeCurrencyFormat(dongia[i].innerText);
+			dg = parseInt(dg) || 0;
 			let sl = parseInt(soluong[i].children[0].value) || 0;
 			tt += dg * sl;
 		}
