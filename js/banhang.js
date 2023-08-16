@@ -9,7 +9,8 @@ window.onload = function () {
 };
 
 function removeCurrencyFormat(text) {
-	return text.replace(/[. ₫]+/g, "");
+	textFormatted = text.replace(/[, ₫]+/g, "");
+	return textFormatted;
 }
 
 function lochh(obj) {
