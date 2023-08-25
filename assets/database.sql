@@ -1,31 +1,52 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Aug 25, 2023 at 11:50 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
-
--- -----------------------------------------------------
--- Table `mydb`.`AccountUser`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`AccountUser` (
-  `Email` VARCHAR(255) NOT NULL,
-  `Password` VARCHAR(255) NOT NULL,
-  `FullName` VARCHAR(255) NOT NULL,
-  `Gender` VARCHAR(255) NOT NULL,
-  `Nationality` VARCHAR(255) NOT NULL,
-  `Note` LONGTEXT NULL,
-  PRIMARY KEY (`Email`))
-ENGINE = InnoDB;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `linkking`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `AccountUser`
+--
+
+CREATE TABLE `AccountUser` (
+  `Email` varchar(255) NOT NULL,
+  `Pwrd` varchar(255) NOT NULL,
+  `FullName` varchar(255) NOT NULL,
+  `Gender` varchar(255) NOT NULL,
+  `Nationality` varchar(255) NOT NULL,
+  `Note` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `AccountUser`
+--
+ALTER TABLE `AccountUser`
+  ADD PRIMARY KEY (`Email`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
