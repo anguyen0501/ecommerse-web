@@ -27,22 +27,6 @@ function validateForm(obj) {
 		radio[0].parentElement.parentElement.style.backgroundColor = "white";
 	}
 
-	let checkbox = document.getElementsByClassName("checkbox");
-	isChecked = false;
-	for (let i = 0; i < checkbox.length; i++) {
-		if (checkbox[i].checked) {
-			isChecked = true;
-			checkbox[checkbox.length - 1].required = false;
-			break;
-		}
-	}
-	if (!isChecked) {
-		checkbox[0].parentElement.parentElement.style.backgroundColor = "yellow";
-		checkAnythingValid = false;
-	} else {
-		checkbox[0].parentElement.parentElement.style.backgroundColor = "white";
-	}
-
 	let quocTich = document.getElementById("quocTich");
 	if (quocTich.value == "") {
 		quocTich.style.backgroundColor = "yellow";
