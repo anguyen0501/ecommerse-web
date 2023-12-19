@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thêm hàng hóa</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
     <?php
-        $con = new mysqli("localhost", "root", "", "linkking");
+        $con = new mysqli("localhost", "root" , "", "linkking");
         $mahh = $_POST['mahh'];
         $tenhh = $_POST['tenhh'];
         $dvt = $_POST['dvt'];
         $dongia = $_POST['dongia'];
-        $sql = "INSERT INTO hanghoa VALUES ('" . $mahh . "', "
-                . "'" . $tenhh . "', "
-                . "'" . $dvt . "', "
-                . "'" . $dongia . "')";
+        $sql = "UPDATE hanghoa SET "
+                . "tenhh='" . $tenhh . "', "
+                . "dvt='" . $dvt . "', "
+                . "dongia='" . $dongia . "' "
+                . "WHERE mahh='" . $mahh . "'";
         if ($con->query($sql) === TRUE) {
-            echo "Thêm hàng hóa thành công";
+            echo "Cập nhật hàng hóa thành công";
         } else {
             echo "Error: " . $sql . "<br>" . $con->error;
         }

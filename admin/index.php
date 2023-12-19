@@ -16,16 +16,35 @@
         $result = $con->query($sql);
 
         if ($result->num_rows > 0) {
+            echo '<table class="table table-striped table-responsive table-bordered">';
+            echo '<thead>';
+            echo '<tr>';
+            echo '<th scope="col">Mã hàng hóa</th>';
+            echo '<th scope="col">Tên hàng hóa</th>';
+            echo '<th scope="col">Đơn vị tính</th>';
+            echo '<th scope="col">Đơn giá</th>';
+            echo '<th scope="col">Hành động</th>';
+            echo '</tr>';
+            echo '</thead>';
+            echo '<tbody>';
             while ($row = $result->fetch_assoc()) {
-                echo "mahh: " . $row["mahh"] . " - tenhh: " . $row["tenhh"] . " - dvt: " . $row["dvt"] . " - dongia: " . $row["dongia"];
-
+                $link_edit = "form_edithanghoa.php?mahh=".$row['mahh'];
+                echo '<tr>';
+                echo '<td>' . $row["mahh"] . '</td>';
+                echo '<td>' . $row["tenhh"] . '</td>';
+                echo '<td>' . $row["dvt"] . '</td>';
+                echo '<td>' . $row["dongia"] . '</td>';
+                echo "<td> <a href='".$link_edit."' >Sửa</a></td>";
+                echo '</tr>';
             } 
+            echo '</tbody>';
+            echo '</table>';
         } else {
-            echo "0 results";
+            echo '<p class="lead">Không có kết quả</p>';
         }
         $con->close();
     ?>
-    <p><a href="form_themhanghoa.php">Quay lại</a></p>
+    <p><a href="form_themhanghoa.php" class="btn btn-primary">Quay lại</a></p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>

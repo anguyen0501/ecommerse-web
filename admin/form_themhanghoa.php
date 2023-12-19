@@ -28,7 +28,9 @@
             <input type="number" class="form-control" id="dongia" name="dongia" placeholder="Đơn giá" required>
         </div>
         <button type="submit" class="btn btn-primary" onclick="validateForm(this)">Thêm</button>
+
     </form>
+    <p><a href="index.php" class="btn btn-primary">Xem danh sách hàng hóa</a></p>
     </div>
     <script src="../js/themhanghoa.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
