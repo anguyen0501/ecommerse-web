@@ -10,9 +10,9 @@
     <title>AV Shop</title>
     <script src="https://kit.fontawesome.com/ffedd7c79f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/dangky.css" />
+    <link rel="stylesheet" href="./css/dangnhap.css" />
     <link rel="icon" href="./images/favicon.png">
-    <script src="./js/dangky.js"></script>
+    <script src="./js/dangnhap.js"></script>
 </head>
 
 <body>
@@ -56,9 +56,9 @@
     </header>
 
     <main>
-        <div class="register-container">
-            <form id="register-form" action="./php/connect.php" method="post">
-                <h1 class="register-title">ĐĂNG KÝ THÀNH VIÊN</h1><br>
+        <div class="login-container">
+            <form id="login-form" action="./php/connect.php" method="post">
+                <h1 class="login-title">ĐĂNG NHẬP</h1><br>
                 <fieldset>
                     <label for="email"><span>Email</span></label><br>
                     <input class="input_form" type="email" id="email" name="email" placeholder="Nhập địa chỉ email"
@@ -70,37 +70,7 @@
                     <input type="password" class="input_form" id="ma" name="ma" placeholder="Nhập mật khẩu" required>
                 </fieldset>
 
-                <fieldset>
-                    <label for="hoTen"><span>Họ và tên</span></label><br>
-                    <input class="input_form" type="text" id="hoTen" name="hoTen" placeholder="Nhập họ và tên" required>
-                </fieldset>
-
-                <fieldset>
-                    <label for="gioitinh"><span>Giới tính</span></label><br>
-                    <div class="input_form">
-                        <label><input type="radio" class="radio" name="gioitinh" value="nam" required>&nbsp;Nam</label>
-                        &nbsp;
-                        <label><input type="radio" class="radio" name="gioitinh" value="nu" required>&nbsp;Nữ</label>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <label for="quocTich"><span>Quốc tịch</span></label><br>
-                    <select name="quocTich" id="quocTich" required>
-                        <option value="">Chọn quốc tịch</option>
-                        <option value="VietNam">Việt Nam</option>
-                        <option value="Lao">Lào</option>
-                        <option value="Campuchia">Campuchia</option>
-                        <option value="Khac">Khác</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <label for="ghiChu"><span>Ghi chú</span></label><br>
-                    <textarea name="ghiChu" id="ghiChu" cols="40" rows="5" maxlength="199"></textarea>
-                </fieldset>
-
-                <button type="submit" onclick="validateForm(this)">Đăng ký</button>
+                <button type="submit" onclick="validateForm(this)">Đăng nhập</button>
             </form>
         </div>
     </main>

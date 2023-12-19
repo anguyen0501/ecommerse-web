@@ -1,0 +1,81 @@
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#login-form {
+	background-color: white;
+	height: max-content;
+	width: 550px;
+	margin-top: 40px;
+	padding: 16px 32px;
+	border-radius: 15px;
+}
+
+.login-title {
+	font-size: 26px;
+	font-weight: 500;
+	color: red;
+	margin-top: 10px;
+}
+
+#login-form > fieldset {
+	border: none;
+	margin-top: 15px;
+}
+
+#login-form span {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#login-form button {
+	height: 40px;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: 500;
+	background-color: red;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.input_form {
+	height: 50px;
+	width: 100%;
+	margin-top: 5px;
+	padding: 12px 16px;
+	border: 0.8px solid rgb(212, 212, 217);
+	border-radius: 5px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.88);
+	align-items: center;
+	align-content: center;
+}
+
+div.input_form > label {
+	position: relative;
+	top: 15%;
+}
+
+#login-form select {
+	height: 50px;
+	width: 100%;
+	margin-top: 5px;
+	padding-left: 12px;
+	font-size: 16px;
+	background-color: white;
+	border: 0.8px solid rgb(212, 212, 217);
+	border-radius: 5px;
+}
+
+#login-form textarea {
+	width: 100%;
+	margin-top: 5px;
+	border: 0.8px solid rgb(212, 212, 217);
+	border-radius: 5px;
+}

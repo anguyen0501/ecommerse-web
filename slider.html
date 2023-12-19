@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta
       name="description"
       content="Website for selling electronic products."
@@ -10,16 +10,67 @@
       name="keywords"
       content="e-commerce, Apple, Asus, Acer, Lenovo, HP, PC, Iphone, Mac, Ipad, Apple Watch, Samsung, OPPO, laptop, headphone, smartphone, tablet, accessories"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AV Shop</title>
+    <title>Linkking Shop</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/ffedd7c79f.js"
       crossorigin="anonymous"
     ></script>
     <link rel="icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/banhang.css" />
-    <script src="./js/banhang.js"></script>
+    <link rel="stylesheet" href="./css/bosieutap.css" />
+    <script src="./js/bosieutap.js"></script>
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -98,183 +149,23 @@
         </div>
       </section>
     </header>
-
-    <main>
-      <div class="banhang-container">
-        <div class="head">
-          <p>BÁN HÀNG</p>
-          <select name="mucgia" id="mucgia" onchange="lochh(this)">
-            <option value="default">Tất Cả</option>
-            <option value="lt20">Dưới 20 Triệu</option>
-            <option value="20to40">20 - 40 Triệu</option>
-            <option value="gt40">Trên 40 Triệu</option>
-          </select>
-        </div>
-        <div class="row">
-          <div>
-            <input
-              type="checkbox"
-              name="chonhet"
-              id="chonhet"
-              onclick="chonhet()"
-            />
-          </div>
-          <div>Hàng hóa</div>
-          <div>Đơn giá</div>
-          <div>Số lượng</div>
-          <div>Thành tiền</div>
-        </div>
-        <div class="row">
-          <div>
-            <input type="checkbox" class="chon" onchange="daott(this)" />
-          </div>
-          <div
-            class="product-name"
-            title="Laptop Acer Predator Gaming Helios PH315-54-99S6 i9 11900H/16G/512G/15.6/GeForce RTX3060 6G/Win11"
-          >
-            Laptop Acer Predator Gaming Helios PH315-54-99S6 i9
-            11900H/16G/512G/15.6/GeForce RTX3060 6G/Win11
-          </div>
-          <div class="dg">16641000</div>
-          <div class="sl" onkeyup="tinhtien(this)">
-            <input
-              type="number"
-              name="soluong"
-              disabled
-              min="0"
-              value="0"
-              placeholder="Nhập số lượng"
-            />
-          </div>
-          <div class="tt"></div>
-        </div>
-        <div class="row">
-          <div>
-            <input type="checkbox" class="chon" onchange="daott(this)" />
-          </div>
-          <div
-            class="product-name"
-            title="Laptop Acer Nitro Gaming AN515-57-5669 i5 11400H/8GB/512GB SSD/Nvidia GTX1650 4GB/Win11"
-          >
-            Laptop Acer Nitro Gaming AN515-57-5669 i5 11400H/8GB 512GB
-            SSD/Nvidia GTX1650 4GB/Win11
-          </div>
-          <div class="dg">19990000</div>
-          <div class="sl" onkeyup="tinhtien(this)">
-            <input
-              type="number"
-              name="soluong"
-              disabled
-              min="0"
-              value="0"
-              placeholder="Nhập số lượng"
-            />
-          </div>
-          <div class="tt"></div>
-        </div>
-        <div class="row">
-          <div>
-            <input type="checkbox" class="chon" onchange="daott(this)" />
-          </div>
-          <div
-            class="product-name"
-            title="Laptop Asus ROG Strix Gaming G513IE-HN246W R7 4800H/8GB/512GB/15.6FHD/GeForce RTX 3050 Ti 4GB/Win11"
-          >
-            Laptop Asus ROG Strix Gaming G513IE-HN246W R7 4800H
-            8GB/512GB/15.6FHD/GeForce RTX 3050 Ti 4GB/Win11
-          </div>
-          <div class="dg">25640500</div>
-          <div class="sl" onkeyup="tinhtien(this)">
-            <input
-              type="number"
-              name="soluong"
-              disabled
-              min="0"
-              value="0"
-              placeholder="Nhập số lượng"
-            />
-          </div>
-          <div class="tt"></div>
-        </div>
-        <div class="row">
-          <div>
-            <input type="checkbox" class="chon" onchange="daott(this)" />
-          </div>
-          <div
-            class="product-name"
-            title="Laptop ASUS Gaming ROG Strix G634JZ-N4029W i9 13980HX/16GB/1TB/16QHD/GeForce RTX 4080 12GB/Win11"
-          >
-            Laptop ASUS Gaming ROG Strix G634JZ-N4029W i9
-            13980HX/16GB/1TB/16QHD/GeForce RTX 4080 12GB/Win11
-          </div>
-          <div class="dg">87300000</div>
-          <div class="sl" onkeyup="tinhtien(this)">
-            <input
-              type="number"
-              name="soluong"
-              disabled
-              min="0"
-              value="0"
-              placeholder="Nhập số lượng"
-            />
-          </div>
-          <div class="tt"></div>
-        </div>
-        <div class="row">
-          <div>
-            <input type="checkbox" class="chon" onchange="daott(this)" />
-          </div>
-          <div
-            class="product-name"
-            title="Laptop Lenovo Gaming Legion 5 15ARH7 R5 6600H/8GB/512GB/15 6FHD/GeForce RTX 3050 4GB/Win11"
-          >
-            Laptop Lenovo Gaming Legion 5 15ARH7 R5 6600H/8GB/512GB/15
-            6FHD/GeForce RTX 3050 4GB/Win11
-          </div>
-          <div class="dg">24351300</div>
-          <div class="sl" onkeyup="tinhtien(this)">
-            <input
-              type="number"
-              name="soluong"
-              disabled
-              min="0"
-              value="0"
-              placeholder="Nhập số lượng"
-            />
-          </div>
-          <div class="tt"></div>
-        </div>
-        <div class="row">
-          <div>
-            <input type="checkbox" class="chon" onchange="daott(this)" />
-          </div>
-          <div
-            class="product-name"
-            title="Laptop Lenovo Gaming Legion 5 15IAH7H i7 12700H/16GB/512GB/15.6WQHD/RTX 3060 6GB/Win11"
-          >
-            Laptop Lenovo Gaming Legion 5 15IAH7H i7
-            12700H/16GB/512GB/15.6WQHD/RTX 3060 6GB/Win11
-          </div>
-          <div class="dg">29239140</div>
-          <div class="sl" onkeyup="tinhtien(this)">
-            <input
-              type="number"
-              name="soluong"
-              disabled
-              min="0"
-              value="0"
-              placeholder="Nhập số lượng"
-            />
-          </div>
-          <div class="tt"></div>
-        </div>
-        <div class="row">
-          <div id="tong-title">TỔNG</div>
-          <div id="tongtien">0 ₫</div>
-        </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
       </div>
-    </main>
-
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
     <footer>
       <div class="footer__container">
         <ul class="chinhsach">
@@ -364,5 +255,24 @@
         </ul>
       </div>
     </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
