@@ -29,12 +29,16 @@
             echo '<tbody>';
             while ($row = $result->fetch_assoc()) {
                 $link_edit = "form_edithanghoa.php?mahh=".$row['mahh'];
+                $link_delete = "deletehanghoa.php?mahh=".$row['mahh'];
                 echo '<tr>';
                 echo '<td>' . $row["mahh"] . '</td>';
                 echo '<td>' . $row["tenhh"] . '</td>';
                 echo '<td>' . $row["dvt"] . '</td>';
                 echo '<td>' . $row["dongia"] . '</td>';
-                echo "<td> <a href='".$link_edit."' >Sửa</a></td>";
+                echo "<td> <a class='btn btn-primary' href='".$link_edit."' >Sửa</a>
+                <a class='btn btn-danger' href='".$link_delete."' >Xóa</a>    
+                </td>";
+
                 echo '</tr>';
             } 
             echo '</tbody>';
