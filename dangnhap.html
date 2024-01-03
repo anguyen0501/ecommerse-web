@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +58,7 @@
 
     <main>
         <div class="login-container">
-            <form id="login-form" action="./php/connect.php" method="post">
+            <form id="login-form" action="./php/login.php" method="post">
                 <h1 class="login-title">ĐĂNG NHẬP</h1><br>
                 <fieldset>
                     <label for="email"><span>Email</span></label><br>
@@ -69,7 +70,7 @@
                     <label for="ma"><span>Mật khẩu</span></label><br>
                     <input type="password" class="input_form" id="ma" name="ma" placeholder="Nhập mật khẩu" required>
                 </fieldset>
-
+                
                 <button type="submit" onclick="validateForm(this)">Đăng nhập</button>
             </form>
         </div>

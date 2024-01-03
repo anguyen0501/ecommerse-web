@@ -7,23 +7,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <?php
-        $con = new mysqli("localhost", "root" , "", "linkking");
+  <?php
+    $con = new mysqli("localhost", "root", "", "linkking");
+
+    // Check connection
+    if ($con->connect_error) {
+        die("Connection failed: " . $con->connect_error);
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mahh = $_POST['mahh'];
         $tenhh = $_POST['tenhh'];
         $dvt = $_POST['dvt'];
         $dongia = $_POST['dongia'];
-        $sql = "UPDATE hanghoa SET "
-                . "tenhh='" . $tenhh . "', "
-                . "dvt='" . $dvt . "', "
-                . "dongia='" . $dongia . "' "
-                . "WHERE mahh='" . $mahh . "'";
-        if ($con->query($sql) === TRUE) {
+
+        // Use a prepared statement for the UPDATE query
+        $sql = "UPDATE hanghoa SET tenhh=?, dvt=?, dongia=? WHERE mahh=?";
+        
+        $stmt = $con->prepare($sql);
+
+        // Bind parameters
+        $stmt->bind_param("ssss", $tenhh, $dvt, $dongia, $mahh);
+
+        // Execute the statement
+        if ($stmt->execute()) {
             echo "Cập nhật hàng hóa thành công";
         } else {
-            echo "Error: " . $sql . "<br>" . $con->error;
+            echo "Error: " . $stmt->error;
         }
-    ?>
+
+        // Close the statement
+        $stmt->close();
+    }
+
+    // Close the connection
+    $con->close();
+?>
+
     <p><a href="index.php" class="btn btn-primary">Xem danh sách hàng hóa</a></p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

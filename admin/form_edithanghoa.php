@@ -8,15 +8,37 @@
   </head>
   <body>
   <?php
-        $mahh = $_GET['mahh'];
-        $con = new mysqli("localhost", "root", "", "linkking");
-        $sql = "SELECT * FROM hanghoa " 
-                . "WHERE mahh='" . $mahh . "'";
-        $result = $con->query($sql);
-        if ($result != null) {
-            $item = mysqli_fetch_array($result);
-        }
-    ?>
+    $mahh = $_GET['mahh'];
+    $con = new mysqli("localhost", "root", "", "linkking");
+
+    // Check connection
+    if ($con->connect_error) {
+        die("Connection failed: " . $con->connect_error);
+    }
+
+    // Use a prepared statement for the SELECT query
+    $sql = "SELECT * FROM hanghoa WHERE mahh=?";
+    $stmt = $con->prepare($sql);
+
+    // Bind parameter
+    $stmt->bind_param("s", $mahh);
+
+    // Execute the statement
+    $stmt->execute();
+
+    // Bind result variables
+    $result = $stmt->get_result();
+
+    // Fetch the result as an associative array
+    $item = $result->fetch_assoc();
+
+    // Close the statement
+    $stmt->close();
+
+    // Close the connection
+    $con->close();
+?>
+
     <h4>Nhập thông tin hàng hóa</h4>
     <form action="edithanghoa.php" method="post">
         <div class="mb-3">
