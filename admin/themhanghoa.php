@@ -41,7 +41,7 @@
 
         // Execute the insertion statement
         if ($insert_stmt->execute()) {
-            echo "Thêm hàng hóa thành công";
+            echo '<p class="lead">Thêm thành công</p>';
         } else {
             echo "Error: " . $insert_stmt->error;
         }
