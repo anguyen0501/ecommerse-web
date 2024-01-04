@@ -14,6 +14,23 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping database structure for linkking
+CREATE DATABASE IF NOT EXISTS `linkking` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `linkking`;
+
+-- Dumping structure for table linkking.accountuser
+CREATE TABLE IF NOT EXISTS `accountuser` (
+  `Email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Pwrd` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `FullName` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Gender` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Nationality` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Note` longtext COLLATE utf8mb4_general_ci,
+  `role` varchar(255) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'user',
+  PRIMARY KEY (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- Dumping data for table linkking.accountuser: ~4 rows (approximately)
 DELETE FROM `accountuser`;
 INSERT INTO `accountuser` (`Email`, `Pwrd`, `FullName`, `Gender`, `Nationality`, `Note`, `role`) VALUES
@@ -22,10 +39,18 @@ INSERT INTO `accountuser` (`Email`, `Pwrd`, `FullName`, `Gender`, `Nationality`,
 	('nthaian.mg@gmail.com', '123456', 'Thái An', 'nam', 'VietNam', '', 'user'),
 	('nthaian@gmail.com', '$2y$10$k0k0Kk5JjyFzinfCkQKSMe7DS9xluHaSlNDmh2USHTV8XrIqfwSj.', 'Thái An', 'nam', 'VietNam', '', 'user');
 
--- Dumping data for table linkking.hanghoa: ~1 rows (approximately)
+-- Dumping structure for table linkking.hanghoa
+CREATE TABLE IF NOT EXISTS `hanghoa` (
+  `mahh` varchar(50) NOT NULL,
+  `tenhh` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `dvt` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `dongia` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table linkking.hanghoa: ~2 rows (approximately)
 DELETE FROM `hanghoa`;
 INSERT INTO `hanghoa` (`mahh`, `tenhh`, `dvt`, `dongia`) VALUES
-	('HH01', 'HAng hoa aa', 'kgg', '19000'),
+	('HH01', 'HAng hoa aa', 'kggggg', '19000'),
 	('HH02', 'HAng hoa aa', 'a', '123');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
