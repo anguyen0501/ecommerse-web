@@ -1,52 +1,35 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: Aug 25, 2023 at 11:50 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `linkking`
---
-
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               8.0.30 - MySQL Community Server - GPL
+-- Server OS:                    Win64
+-- HeidiSQL Version:             12.1.0.6537
 -- --------------------------------------------------------
 
---
--- Table structure for table `AccountUser`
---
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE TABLE `AccountUser` (
-  `Email` varchar(255) NOT NULL,
-  `Pwrd` varchar(255) NOT NULL,
-  `FullName` varchar(255) NOT NULL,
-  `Gender` varchar(255) NOT NULL,
-  `Nationality` varchar(255) NOT NULL,
-  `Note` longtext DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+-- Dumping data for table linkking.accountuser: ~4 rows (approximately)
+DELETE FROM `accountuser`;
+INSERT INTO `accountuser` (`Email`, `Pwrd`, `FullName`, `Gender`, `Nationality`, `Note`, `role`) VALUES
+	('ab@gmail.com', '$2y$10$QbpeUqOieDU4NDgEx4gSFObevyCc.gQTH3WFwuCfxacf148cz/3qa', 'Thái An', 'nam', 'VietNam', '', 'user'),
+	('admin@admin.com', '$2y$10$YI/q3H3fqpB359RToVWEA.8g/mJZ13IOW3D1.Q3uCJwpMYAEnpuTC', 'admin', 'nam', 'VietNam', '', 'admin'),
+	('nthaian.mg@gmail.com', '123456', 'Thái An', 'nam', 'VietNam', '', 'user'),
+	('nthaian@gmail.com', '$2y$10$k0k0Kk5JjyFzinfCkQKSMe7DS9xluHaSlNDmh2USHTV8XrIqfwSj.', 'Thái An', 'nam', 'VietNam', '', 'user');
 
---
--- Indexes for dumped tables
---
+-- Dumping data for table linkking.hanghoa: ~1 rows (approximately)
+DELETE FROM `hanghoa`;
+INSERT INTO `hanghoa` (`mahh`, `tenhh`, `dvt`, `dongia`) VALUES
+	('HH01', 'HAng hoa aa', 'kgg', '19000'),
+	('HH02', 'HAng hoa aa', 'a', '123');
 
---
--- Indexes for table `AccountUser`
---
-ALTER TABLE `AccountUser`
-  ADD PRIMARY KEY (`Email`);
-COMMIT;
-
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
