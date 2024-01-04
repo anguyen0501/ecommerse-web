@@ -3,9 +3,9 @@ session_start();
 
 // Kiểm tra xem người dùng đã đăng nhập và có vai trò là "admin" hay không
 if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role'] !== 'admin') {
-  // Nếu không phải "admin" hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
-  header("Location: ../index.html");
-  exit();
+    // Nếu không phải "admin" hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
+    header("Location: ../index.html");
+    exit();
 }
 
 // Nếu đúng "admin" đã đăng nhập, hiển thị nội dung trang admin/index.php
@@ -24,11 +24,21 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
 <body>
     <div class="container-fluid">
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Navbar</a>
+                    <?php if (isset($_SESSION['email'])) { ?>
+                        <div class="user-icon">
+                            <i class="fas fa-user"></i>
+                            <?php echo $_SESSION['email']; ?>
+                            <a href="../dangnhap.html" class="btn btn-outline-danger">Logout</a>
+                        </div>
+                    <?php } ?>
+                </div>
+            </nav>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
                     <h1 class="text-center mt-3">Quản lý hàng hóa</h1>
-                    <div class="card">
-                        <div class="card-body">
                             <h4 class="card-title text-center">Nhập thông tin hàng hóa</h4>
                             <form action="themhanghoa.php" method="post">
                                 <div class="mb-3">
@@ -49,9 +59,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
                                 </div>
                                 <button type="submit" class="btn btn-primary" onclick="validateForm(this)">Thêm</button>
                             </form>
-                            <p class="text-center mt-3"><a href="index.php" class="btn btn-primary">Xem danh sách hàng hóa</a></p>
-                        </div>
-                    </div>
+                            <p class="mt-3"><a href="index.php" class="btn btn-primary">Xem danh sách hàng hóa</a></p>
                 </div>
             </div>
         </div>
