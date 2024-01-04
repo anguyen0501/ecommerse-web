@@ -26,12 +26,12 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
     <div class="container">
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand">Navbar</a>
+          <a class="navbar-brand">VU-AN</a>
           <form class="d-flex" role="search" method="GET" action="">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
             <select class="form-select" name="search_by">
-              <option value="mahh">Mã hàng hóa</option>
-              <option value="tenhh">Tên hàng hóa</option>
+              <option value="Email">Mã hàng hóa</option>
+              <option value="FullNme">Tên hàng hóa</option>
             </select> 
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
@@ -39,12 +39,12 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
             <div class="user-icon">
               <i class="fas fa-user"></i>
               <?php echo $_SESSION['email']; ?>
-              <a href="../dangnhap.html" class="btn btn-outline-danger">Logout</a>
+              <a href="../../dangnhap.html" class="btn btn-outline-danger">Logout</a>
             </div>
           <?php } ?>
         </div>
       </nav>
-      <a class='btn btn-primary float-end my-3' href='form_themhanghoa.php' >Thêm</a> 
+      <a class='btn btn-primary float-end my-3' href='addNewUser.php' >Thêm</a> 
       <?php
       $con = new mysqli("localhost", "root", "", "linkking");
       if ($con->connect_error) {
@@ -57,33 +57,32 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
         $searchTerm = $_GET['search'];
         $searchBy = $_GET['search_by'];
       
-        $sql = "SELECT * FROM hanghoa WHERE $searchBy LIKE '%$searchTerm%'";
+        $sql = "SELECT * FROM accountuser WHERE $searchBy LIKE '%$searchTerm%'";
       } else {
-        $sql = "SELECT * FROM hanghoa";
+        $sql = "SELECT * FROM accountuser";
       }
       $result = $con->query($sql);
       if ($result->num_rows > 0) {
         echo '<table class="table table-striped table-responsive table-bordered">';
         echo '<thead>';
         echo '<tr>';
-        echo '<th scope="col">Mã hàng hóa</th>';
-        echo '<th scope="col">Tên hàng hóa</th>';
-        echo '<th scope="col">Đơn vị tính</th>';
-        echo '<th scope="col">Đơn giá</th>';
-        echo '<th scope="col">Hành động</th>';
+        echo '<th scope="col">Email</th>';
+        echo '<th scope="col">Họ và tên</th>';
+        echo '<th scope="col">Giới tính</th>';
+        echo '<th scope="col">Quốc tịch</th>';
+        echo '<th scope="col">Role</th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
         while ($row = $result->fetch_assoc()) {
-          $link_edit = "form_edithanghoa.php?mahh=" . $row['mahh'];
-          $link_delete = "deletehanghoa.php?mahh=" . $row['mahh'];
           echo '<tr>';
-          echo '<td>' . $row["mahh"] . '</td>';
-          echo '<td>' . $row["tenhh"] . '</td>';
-          echo '<td>' . $row["dvt"] . '</td>';
-          echo '<td>' . $row["dongia"] . '</td>';
-          echo "<td> <a class='btn btn-primary' href='" . $link_edit . "' >Sửa</a>
-                <a class='btn btn-danger' href='" . $link_delete . "' >Xóa</a>   
+          echo '<td>' . $row["Email"] . '</td>';
+          echo '<td>' . $row["FullName"] . '</td>';
+          echo '<td>' . $row["Gender"] . '</td>';
+          echo '<td>' . $row["Nationality"] . '</td>';
+          echo '<td>' . $row["role"] . '</td>';
+          echo "<td> <a class='btn btn-primary' href='#' >Sửa</a>
+                <a class='btn btn-danger' href='#' >Xóa</a>   
                 </td>";
           echo '</tr>';
         }
@@ -94,7 +93,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
       }
       $con->close();
       ?>
-      <p><a href="form_themhanghoa.php" class="btn btn-primary">Quay lại</a></p>
+      <p><a href="#" class="btn btn-primary">Quay lại</a></p>
     </div>
     
   </div>
