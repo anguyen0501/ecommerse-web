@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Kiểm tra xem người dùng đã đăng nhập và có vai trò là "admin" hay không
+if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role'] !== 'admin') {
+  // Nếu không phải "admin" hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
+  header("Location: ../index.html");
+  exit();
+}
+
+// Nếu đúng "admin" đã đăng nhập, hiển thị nội dung trang admin/index.php
+?>
 <!doctype html>
 <html lang="en">
   <head>
