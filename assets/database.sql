@@ -31,13 +31,7 @@ CREATE TABLE IF NOT EXISTS `accountuser` (
   PRIMARY KEY (`Email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table linkking.accountuser: ~4 rows (approximately)
-DELETE FROM `accountuser`;
-INSERT INTO `accountuser` (`Email`, `Pwrd`, `FullName`, `Gender`, `Nationality`, `Note`, `role`) VALUES
-	('ab@gmail.com', '$2y$10$QbpeUqOieDU4NDgEx4gSFObevyCc.gQTH3WFwuCfxacf148cz/3qa', 'Thái An', 'nam', 'VietNam', '', 'user'),
-	('admin@admin.com', '$2y$10$YI/q3H3fqpB359RToVWEA.8g/mJZ13IOW3D1.Q3uCJwpMYAEnpuTC', 'admin', 'nam', 'VietNam', '', 'admin'),
-	('nthaian.mg@gmail.com', '123456', 'Thái An', 'nam', 'VietNam', '', 'user'),
-	('nthaian@gmail.com', '$2y$10$k0k0Kk5JjyFzinfCkQKSMe7DS9xluHaSlNDmh2USHTV8XrIqfwSj.', 'Thái An', 'nam', 'VietNam', '', 'user');
+-- Data exporting was unselected.
 
 -- Dumping structure for table linkking.hanghoa
 CREATE TABLE IF NOT EXISTS `hanghoa` (
@@ -47,11 +41,7 @@ CREATE TABLE IF NOT EXISTS `hanghoa` (
   `dongia` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table linkking.hanghoa: ~2 rows (approximately)
-DELETE FROM `hanghoa`;
-INSERT INTO `hanghoa` (`mahh`, `tenhh`, `dvt`, `dongia`) VALUES
-	('HH01', 'HAng hoa aa', 'kggggg', '19000'),
-	('HH02', 'HAng hoa aa', 'a', '123');
+-- Data exporting was unselected.
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
