@@ -65,7 +65,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
             // Close the statement
             $stmt->close();
 
-            // Close the connection
+            // Close the connectionn
             $con->close();
             ?>
             <div class="row justify-content-center">
