@@ -48,3 +48,14 @@ CREATE TABLE IF NOT EXISTS `hanghoa` (
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+
+-- CREATE TABLE IF NOT EXISTS `hanghoa` (
+--   `mahh` varchar(50) NOT NULL,
+--   `tenhh` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+--   `dvt` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+--   `dongia` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- ALTER TABLE `hanghoa` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+
