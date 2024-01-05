@@ -7,7 +7,16 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
   header("Location: ../dangnhap.html");
   exit();
 }
+// Xử lý đăng xuất
+if (isset($_POST['logout'])) {
+  // Hủy bỏ toàn bộ dữ liệu session
+  session_unset();
+  session_destroy();
 
+  // Chuyển hướng về trang đăng nhập
+  header("Location: ../dangnhap.html");
+  exit();
+}
 // Nếu đúng "admin" đã đăng nhập, hiển thị nội dung trang admin/index.php
 ?>
 <!doctype html>
