@@ -4,7 +4,7 @@ session_start();
 // Kiểm tra xem người dùng đã đăng nhập và có vai trò là "admin" hay không
 if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role'] !== 'admin') {
   // Nếu không phải "admin" hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
-  header("Location: ../index.html");
+  header("Location: ../dangnhap.html");
   exit();
 }
 

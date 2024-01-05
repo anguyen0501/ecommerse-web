@@ -4,7 +4,7 @@ session_start();
 // Kiểm tra xem người dùng đã đăng nhập và có vai trò là "admin" hay không
 if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role'] !== 'admin') {
   // Nếu không phải "admin" hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
-  header("Location: ../index.html");
+  header("Location: ../dangnhap.html");
   exit();
 }
 
@@ -32,7 +32,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
             <select class="form-select" name="search_by">
               <option value="mahh">Mã hàng hóa</option>
               <option value="tenhh">Tên hàng hóa</option>
-            </select> 
+            </select>
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
           <?php if (isset($_SESSION['email'])) { ?>
@@ -44,7 +44,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
           <?php } ?>
         </div>
       </nav>
-      <a class='btn btn-primary float-end my-3' href='form_themhanghoa.php' >Thêm</a> 
+      <a class='btn btn-primary float-end my-3' href='form_themhanghoa.php'>Thêm</a>
       <?php
       $con = new mysqli("localhost", "root", "", "linkking");
       if ($con->connect_error) {
@@ -52,16 +52,19 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
       }
       $sql = "SELECT * FROM hanghoa";
       $result = $con->query($sql);
-      
+
       if (isset($_GET['search'])) {
         $searchTerm = $_GET['search'];
         $searchBy = $_GET['search_by'];
-      
+
+        $searchTerm = $con->real_escape_string($searchTerm); // Prevent SQL injection
         $sql = "SELECT * FROM hanghoa WHERE $searchBy LIKE '%$searchTerm%'";
       } else {
         $sql = "SELECT * FROM hanghoa";
       }
+
       $result = $con->query($sql);
+
       if ($result->num_rows > 0) {
         echo '<table class="table table-striped table-responsive table-bordered">';
         echo '<thead>';
@@ -96,10 +99,10 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
       ?>
       <p><a href="form_themhanghoa.php" class="btn btn-primary">Quay lại</a></p>
     </div>
-    
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      
+
 </body>
 
 </html>
