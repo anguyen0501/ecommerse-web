@@ -99,7 +99,7 @@ if (isset($_POST['logout'])) {
       }
       $con->close();
       ?>
-      <p><a href="../index.php" class="btn btn-primary">Quay lại</a></p>
+      <p><a href="../index.php" class="btn btn-primary">Danh sách hàng hóa</a></p>
     </div>
     
   </div>

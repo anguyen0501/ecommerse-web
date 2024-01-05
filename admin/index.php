@@ -110,7 +110,7 @@ if (isset($_POST['logout'])) {
       }
       $con->close();
       ?>
-      <p><a href="form_themhanghoa.php" class="btn btn-primary">Quay lại</a></p>
+      <p><a href="./user/user.php" class="btn btn-primary">Danh sách tài khoản</a></p>
     </div>
 
   </div>
