@@ -26,7 +26,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
         <div class="container">
             <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand">Navbar</a>
+                    <a class="navbar-brand">Home</a>
                     <?php if (isset($_SESSION['email'])) { ?>
                         <div class="user-icon">
                             <i class="fas fa-user"></i>

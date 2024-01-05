@@ -16,7 +16,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Admin - Edit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -26,7 +26,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
         <div class="container">
             <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand">Navbar</a>
+                    <a class="navbar-brand">Home</a>
                     <?php if (isset($_SESSION['email'])) { ?>
                         <div class="user-icon">
                             <i class="fas fa-user"></i>

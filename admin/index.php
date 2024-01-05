@@ -26,7 +26,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
     <div class="container">
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand">Navbar</a>
+          <a class="navbar-brand">Home</a>
           <form class="d-flex" role="search" method="GET" action="">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
             <select class="form-select" name="search_by">
