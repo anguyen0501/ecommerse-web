@@ -4,10 +4,19 @@ session_start();
 // Kiểm tra xem người dùng đã đăng nhập và có vai trò là "admin" hay không
 if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role'] !== 'admin') {
   // Nếu không phải "admin" hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
-  header("Location: ../index.html");
+  header("Location: ../dangnhap.html");
   exit();
 }
+// Xử lý đăng xuất
+if (isset($_POST['logout'])) {
+  // Hủy bỏ toàn bộ dữ liệu session
+  session_unset();
+  session_destroy();
 
+  // Chuyển hướng về trang đăng nhập
+  header("Location: ../dangnhap.html");
+  exit();
+}
 // Nếu đúng "admin" đã đăng nhập, hiển thị nội dung trang admin/index.php
 ?>
 <!doctype html>
@@ -30,8 +39,8 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
           <form class="d-flex" role="search" method="GET" action="">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
             <select class="form-select" name="search_by">
-              <option value="Email">Mã hàng hóa</option>
-              <option value="FullNme">Tên hàng hóa</option>
+              <option value="Email">Email</option>
+              <option value="FullNme">Tên</option>
             </select> 
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
@@ -44,13 +53,12 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
           <?php } ?>
         </div>
       </nav>
-      <a class='btn btn-primary float-end my-3' href='addNewUser.php' >Thêm</a> 
       <?php
       $con = new mysqli("localhost", "root", "", "linkking");
       if ($con->connect_error) {
         die("Connection failed: " . $con->connect_error);
       }
-      $sql = "SELECT * FROM hanghoa";
+      $sql = "SELECT * FROM accountuser";
       $result = $con->query($sql);
       
       if (isset($_GET['search'])) {
@@ -63,7 +71,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
       }
       $result = $con->query($sql);
       if ($result->num_rows > 0) {
-        echo '<table class="table table-striped table-responsive table-bordered">';
+        echo '<table class=" my-3 table table-striped table-responsive table-bordered">';
         echo '<thead>';
         echo '<tr>';
         echo '<th scope="col">Email</th>';
@@ -81,9 +89,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
           echo '<td>' . $row["Gender"] . '</td>';
           echo '<td>' . $row["Nationality"] . '</td>';
           echo '<td>' . $row["role"] . '</td>';
-          echo "<td> <a class='btn btn-primary' href='#' >Sửa</a>
-                <a class='btn btn-danger' href='#' >Xóa</a>   
-                </td>";
+
           echo '</tr>';
         }
         echo '</tbody>';
@@ -93,7 +99,7 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
       }
       $con->close();
       ?>
-      <p><a href="#" class="btn btn-primary">Quay lại</a></p>
+      <p><a href="../index.php" class="btn btn-primary">Quay lại</a></p>
     </div>
     
   </div>
