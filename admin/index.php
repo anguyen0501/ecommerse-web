@@ -7,7 +7,16 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
   header("Location: ../dangnhap.html");
   exit();
 }
+// Xử lý đăng xuất
+if (isset($_POST['logout'])) {
+  // Hủy bỏ toàn bộ dữ liệu session
+  session_unset();
+  session_destroy();
 
+  // Chuyển hướng về trang đăng nhập
+  header("Location: ../dangnhap.html");
+  exit();
+}
 // Nếu đúng "admin" đã đăng nhập, hiển thị nội dung trang admin/index.php
 ?>
 <!doctype html>
@@ -39,7 +48,9 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email']) || $_SESSION['role']
             <div class="user-icon">
               <i class="fas fa-user"></i>
               <?php echo $_SESSION['email']; ?>
-              <a href="../dangnhap.html" class="btn btn-outline-danger">Logout</a>
+              <form method="post" style="display: inline;">
+                <button type="submit" name="logout" class="btn btn-outline-danger">Logout</button>
+              </form>
             </div>
           <?php } ?>
         </div>
