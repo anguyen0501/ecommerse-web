@@ -28,6 +28,8 @@ if (isset($_POST['logout'])) {
   <title>Admin</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -55,7 +57,7 @@ if (isset($_POST['logout'])) {
           <?php } ?>
         </div>
       </nav>
-      <a class='btn btn-primary float-end my-3' href='form_themhanghoa.php'>Thêm</a>
+      <a class='bi bi-file-plus btn btn-success float-end my-3' href='form_themhanghoa.php'>Thêm mới</a>
       <?php
       $con = new mysqli("localhost", "root", "", "linkking");
       if ($con->connect_error) {
